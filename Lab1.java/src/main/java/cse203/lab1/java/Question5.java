@@ -44,7 +44,42 @@ public class Question5 {
         ElementQ5 number = new ElementQ5(sc.nextInt());
         int position = sc.nextInt();
         element.add(position, number);
-        element.remove(element.size()-1);
+        element.remove(element.size() - 1);
+    }
+
+    private boolean checkEqual(ArrayList<ElementQ5> a, ElementQ5 b) {
+        for (ElementQ5 k : a) {
+            if (k.getNumber() == b.getNumber()) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void findDuplicate() {
+        ArrayList<ElementQ5> a = new ArrayList<>();
+        for (int i = 0; i < element.size(); i++) {
+            if (checkEqual(a, element.get(i)) == false) {
+                for (int j = i + 1; j < element.size(); j++) {
+                    if ((element.get(i).getNumber()) == (element.get(j).getNumber())) {
+                        a.add(element.get(i));
+                        break;
+                    }
+                }
+            }
+        }
+
+    }
+
+    public void removeDuplicate() {
+
+        for (int i = 0; i < element.size(); i++) {
+            for (int j = i + 1; j < element.size(); j++) {
+                if ((element.get(i).getNumber()) == (element.get(j).getNumber())) {
+                    element.remove(j);
+                }
+            }
+        }
     }
 
     public void displayArray() {

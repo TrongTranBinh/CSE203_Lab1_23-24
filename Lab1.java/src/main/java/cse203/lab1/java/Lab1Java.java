@@ -24,10 +24,16 @@ public class Lab1Java {
         System.out.print(q4.sumAllEvens(a));
          */
         //Question 5
-        /**/
-        Question5 array = new Question5();
-        array.getArray();
-        array.replaceElement();
-        array.displayArray();
+        /*
+        Question5 q5 = new Question5();
+        q5.getArray();
+        q5.removeDuplicate();
+        q5.displayArray();
+         */
+        //Question 6
+        /*
+        Question6 q6 = new Question6("abca");
+        q6.isPalindrome();
+         */
     }
 }
